@@ -4,55 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>What To Do Today</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #0f0f0f;
-      color: #f0f0f0;
-      font-family: "Segoe UI", sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .container {
-      text-align: center;
-      background: #1f1f1f;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 255, 170, 0.2);
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .task {
-      font-size: 1.5rem;
-      color: #00ffaa;
-    }
-
-    .date {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      color: #999;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1 id="dayNo"></h1>
+    <div class="task highlight">5 daily prayers and studying 5 quran verses with meaning — no exceptions, no compromises.</div>
     <div class="task" id="task">Loading...</div>
     <div class="date" id="date"></div>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
