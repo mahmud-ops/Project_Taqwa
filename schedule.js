@@ -1,38 +1,57 @@
 export const schedule = {
-  // Academic prep before labs (27 July – 25 Aug)
-  "2025-07-26": "📘 EEE",
-  "2025-07-27": "📘 EEE",
-  "2025-07-28": "📘 EEE",
-  "2025-07-29": "📘 EEE",
-  "2025-07-30": "📘 EEE",
-  "2025-07-31": "📘 EEE",
-  "2025-08-01": "📘 EEE",
-  "2025-08-02": "📘 EEE",
-  "2025-08-03": "📐 Math",
-  "2025-08-04": "📐 Math",
-  "2025-08-05": "📐 Math",
-  "2025-08-06": "📐 Math",
-  "2025-08-07": "📐 Math",
-  "2025-08-08": "📐 Math",
-  "2025-08-09": "📐 Math",
-  "2025-08-10": "📐 Math",
-  "2025-08-11": "📐 Math",
-  "2025-08-12": "💼 OOP",
-  "2025-08-13": "💼 OOP",
-  "2025-08-14": "💼 OOP",
-  "2025-08-15": "💼 OOP",
-  "2025-08-16": "💼 OOP",
-  "2025-08-17": "📊 Discrete Math",
-  "2025-08-18": "📊 Discrete Math",
-  "2025-08-19": "📊 Discrete Math",
-  "2025-08-20": "📊 Discrete Math",
-  "2025-08-21": "📊 Discrete Math",
-  "2025-08-22": "💰 Economics",
-  "2025-08-23": "💰 Economics",
-  "2025-08-24": "💰 Economics",
-  "2025-08-25": "🧪 Lab Exam Prep Buffer",
+  // Academic prep + CP / Explore stack (26 July – 25 Aug)
 
-  // Lab Exams (26 Aug – 6 Sep)
+  "2025-07-26": "📘 EEE + 🧠 CP",
+  "2025-07-27": "📘 EEE + 🚀 Explore: JavaScript Fundamentals Recap",
+
+  "2025-07-28": "📘 EEE + 🧠 CP",
+  "2025-07-29": "📘 EEE + 🚀 Explore: Advanced JavaScript Concepts",
+
+  "2025-07-30": "📘 EEE + 🧠 CP",
+  "2025-07-31": "📘 EEE + 🚀 Explore: React Basics",
+
+  "2025-08-01": "📘 EEE + 🧠 CP",
+  "2025-08-02": "📘 EEE + 🚀 Explore: React State & Events",
+
+  "2025-08-03": "📐 Math + 🧠 CP",
+  "2025-08-04": "📐 Math + 🚀 Explore: Node.js Basics",
+
+  "2025-08-05": "📐 Math + 🧠 CP",
+  "2025-08-06": "📐 Math + 🚀 Explore: Express.js Fundamentals",
+
+  "2025-08-07": "📐 Math + 🧠 CP",
+  "2025-08-08": "📐 Math + 🚀 Explore: REST APIs & MongoDB Basics",
+
+  "2025-08-09": "📐 Math + 🧠 CP",
+  "2025-08-10": "📐 Math + 🚀 Explore: Git & GitHub Basics",
+
+  "2025-08-11": "📐 Math + 🧠 CP",
+  "2025-08-12": "💼 OOP + 🚀 Explore: Linux Command Line & Bash Scripting",
+
+  "2025-08-13": "💼 OOP + 🧠 CP",
+  "2025-08-14": "💼 OOP + 🚀 Explore: Docker Basics",
+
+  "2025-08-15": "💼 OOP + 🧠 CP",
+  "2025-08-16": "💼 OOP + 🚀 Explore: CI/CD Concepts",
+
+  "2025-08-17": "📊 Discrete Math + 🧠 CP",
+  "2025-08-18": "📊 Discrete Math + 🚀 Explore: Networking Fundamentals",
+
+  "2025-08-19": "📊 Discrete Math + 🧠 CP",
+  "2025-08-20":
+    "📊 Discrete Math + 🚀 Explore: Web Security Basics (OWASP Top 10)",
+
+  "2025-08-21": "📊 Discrete Math + 🧠 CP",
+  "2025-08-22":
+    "💰 Economics + 🚀 Explore: Common Web Vulnerabilities (XSS, SQLi)",
+
+  "2025-08-23": "💰 Economics + 🧠 CP",
+  "2025-08-24": "💰 Economics + 🚀 Explore: Burp Suite Introduction",
+
+  "2025-08-25": "🧪 Lab Exam Prep Buffer + 🧠 CP",
+
+  // Lab Exams (26 Aug – 6 Sep) — no CP or explore, full focus on labs
+
   "2025-08-26": "🧪 Lab Exam Day 1",
   "2025-08-27": "🧪 Lab Exam Day 2",
   "2025-08-28": "🧪 Lab Exam Day 3",
@@ -46,23 +65,31 @@ export const schedule = {
   "2025-09-05": "🧪 Lab Exam Day 11",
   "2025-09-06": "🧪 Lab Exam Day 12",
 
-  // Prep Leave (7 Sep – 20 Sep)
-  "2025-09-07": "📚 Prep Leave - Review & Rest",
-  "2025-09-08": "📚 Prep Leave - Review & Rest",
-  "2025-09-09": "📚 Prep Leave - Review & Rest",
-  "2025-09-10": "📚 Prep Leave - Review & Rest",
-  "2025-09-11": "📚 Prep Leave - Review & Rest",
-  "2025-09-12": "📚 Prep Leave - Review & Rest",
-  "2025-09-13": "📚 Prep Leave - Review & Rest",
-  "2025-09-14": "📚 Prep Leave - Review & Rest",
-  "2025-09-15": "📚 Prep Leave - Review & Rest",
-  "2025-09-16": "📚 Prep Leave - Review & Rest",
-  "2025-09-17": "📚 Prep Leave - Review & Rest",
-  "2025-09-18": "📚 Prep Leave - Review & Rest",
-  "2025-09-19": "📚 Prep Leave - Review & Rest",
-  "2025-09-20": "📚 Prep Leave - Review & Rest",
+  // Prep Leave (7 Sep – 20 Sep) — CP on evens + explore on odds or just review?
 
-  // Final Exams (21 Sep – 27 Oct)
+  "2025-09-07":
+    "📚 Prep Leave - Review & Rest + 🚀 Explore: Linux Privilege Escalation",
+  "2025-09-08": "📚 Prep Leave - Review & Rest + 🧠 CP",
+  "2025-09-09": "📚 Prep Leave - Review & Rest + 🚀 Explore: Metasploit Basics",
+  "2025-09-10": "📚 Prep Leave - Review & Rest + 🧠 CP",
+  "2025-09-11":
+    "📚 Prep Leave - Review & Rest + 🚀 Explore: Ethical Hacking Principles",
+  "2025-09-12": "📚 Prep Leave - Review & Rest + 🧠 CP",
+  "2025-09-13":
+    "📚 Prep Leave - Review & Rest + 🚀 Explore: Python Basics for Security",
+  "2025-09-14": "📚 Prep Leave - Review & Rest + 🧠 CP",
+  "2025-09-15":
+    "📚 Prep Leave - Review & Rest + 🚀 Explore: Writing Security Scripts",
+  "2025-09-16": "📚 Prep Leave - Review & Rest + 🧠 CP",
+  "2025-09-17":
+    "📚 Prep Leave - Review & Rest + 🚀 Explore: Web App Pentesting Practice",
+  "2025-09-18": "📚 Prep Leave - Review & Rest + 🧠 CP",
+  "2025-09-19":
+    "📚 Prep Leave - Review & Rest + 🚀 Explore: Capture The Flag (CTF) Introduction",
+  "2025-09-20": "📚 Prep Leave - Review & Rest + 🧠 CP",
+
+  // Final Exams (21 Sep – 27 Oct) — exam days, no extra CP or explore
+
   "2025-09-21": "📝 Final Exam Day 1",
   "2025-09-22": "📝 Final Exam Day 2",
   "2025-09-23": "📝 Final Exam Day 3",

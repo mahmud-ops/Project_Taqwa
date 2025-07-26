@@ -1,4 +1,4 @@
-import { schedule } from './schedule.js';
+import { schedule } from "./schedule.js";
 
 const taskElement = document.getElementById("task");
 const dateElement = document.getElementById("date");
@@ -16,9 +16,12 @@ const formattedLocal = `${year}-${month}-${day}`;
 // Calculate day number relative to start date
 const diffTime = today - startDate;
 const dayNo = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
-
-dayNoElement.textContent = `${(32-3) - dayNo} days left until the exam.`;
-dateElement.innerText = `📅 ${formattedLocal.split('-').reverse().join(' / ')}`;
+if (dayNo < 32) {
+  dayNoElement.textContent = `${32 - 3 - dayNo} days left until the exam.`;
+} else {
+  dayNoElement.textContent = `The exam is currently in progress.`;
+}
+dateElement.innerText = `📅 ${formattedLocal.split("-").reverse().join(" / ")}`;
 
 if (schedule[formattedLocal]) {
   taskElement.innerText = `${schedule[formattedLocal]}`;
