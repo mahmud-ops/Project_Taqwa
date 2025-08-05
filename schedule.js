@@ -1,6 +1,7 @@
 export const schedule = {
   // Starting 6 Aug 2025 - 2 days Explore + 1 day CP pattern
 
+  "2025-08-05": "📐 Math + 🧠 CP",
   "2025-08-06": "📐 Math + 🚀 Explore: DevOps Basics - CI/CD Concepts",
   "2025-08-07": "📐 Math + 🚀 Explore: DevOps - Docker Basics",
   "2025-08-08": "📐 Math + 🧠 CP",
