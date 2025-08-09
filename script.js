@@ -28,3 +28,35 @@ if (schedule[formattedLocal]) {
 } else {
   taskElement.innerText = "🚫 No tasks scheduled today. Add one in JS!";
 }
+
+fetch("https://codeforces.com/api/contest.list")
+  .then((res) => res.json())
+  .then((data) => {
+    if (data.status === "OK") {
+      const upcoming = data.result.filter(
+        (contest) => contest.phase === "BEFORE"
+      );
+      if (upcoming.length === 0) {
+        console.log("No upcoming contests.");
+        return;
+      }
+
+      const contest = upcoming[0];
+      const dateObj = new Date(contest.startTimeSeconds * 1000);
+
+      const date = dateObj.toDateString(); // e.g. 8/9/2025
+      const time = dateObj.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      }); // e.g. 14:30
+      conBtn.addEventListener("click", () => {
+        console.log(`You have ${contest.name} on ${date} at ${time}`);
+        alert(`You have a ${contest.name} contest on ${date} at ${time}`);
+      });
+    } else {
+      console.error("API error");
+    }
+  })
+  .catch((err) => console.error(err));
+
+const conBtn = document.getElementById("contestNotice");
