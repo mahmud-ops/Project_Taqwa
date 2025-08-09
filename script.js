@@ -32,30 +32,44 @@ if (schedule[formattedLocal]) {
 fetch("https://codeforces.com/api/contest.list")
   .then((res) => res.json())
   .then((data) => {
-    if (data.status === "OK") {
-      const upcoming = data.result.filter(
-        (contest) => contest.phase === "BEFORE"
-      );
-      if (upcoming.length === 0) {
-        console.log("No upcoming contests.");
-        return;
-      }
-
-      const contest = upcoming[0];
-      const dateObj = new Date(contest.startTimeSeconds * 1000);
-
-      const date = dateObj.toDateString(); // e.g. 8/9/2025
-      const time = dateObj.toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-      }); // e.g. 14:30
-      conBtn.addEventListener("click", () => {
-        console.log(`You have ${contest.name} on ${date} at ${time}`);
-        alert(`You have a ${contest.name} contest on ${date} at ${time}`);
-      });
-    } else {
+    if (data.status !== "OK") {
       console.error("API error");
+      return;
     }
+
+    const now = Date.now() / 1000; // current time in seconds
+
+    // filter future contests + ongoing contests
+    const ongoingOrUpcoming = data.result.filter((contest) => {
+      if (contest.phase !== "BEFORE" && contest.phase !== "CODING") {
+        return false; // ignore finished or canceled contests
+      }
+      const contestStart = contest.startTimeSeconds;
+      const contestEnd = contestStart + contest.durationSeconds;
+      return now < contestEnd; // contest is ongoing or not started yet
+    });
+
+    if (ongoingOrUpcoming.length === 0) {
+      console.log("No upcoming or ongoing contests.");
+      return;
+    }
+
+    // sort by start time ascending
+    ongoingOrUpcoming.sort((a, b) => a.startTimeSeconds - b.startTimeSeconds);
+
+    const contest = ongoingOrUpcoming[0];
+
+    const dateObj = new Date(contest.startTimeSeconds * 1000);
+    const date = dateObj.toDateString();
+    const time = dateObj.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    conBtn.addEventListener("click", () => {
+      console.log(`You have ${contest.name} on ${date} at ${time}`);
+      alert(`You have a ${contest.name} contest on ${date} at ${time}`);
+    });
   })
   .catch((err) => console.error(err));
 
