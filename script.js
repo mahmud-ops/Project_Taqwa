@@ -17,7 +17,7 @@ const formattedLocal = `${year}-${month}-${day}`;
 const diffTime = today - startDate;
 const dayNo = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
 if (dayNo < 32) {
-  dayNoElement.textContent = `${32 - 3 - dayNo} days left until the exam.`;
+  dayNoElement.textContent = `${36 - 3 - dayNo} days left until the exam.`;
 } else {
   dayNoElement.textContent = `The exam is currently in progress.`;
 }
