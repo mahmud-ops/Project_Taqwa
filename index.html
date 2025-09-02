@@ -8,19 +8,10 @@
     ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What To Do Today</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./dist/output.css">
     <link rel="icon" href="Images/Logo.png" type="image/png" />
   </head>
   <body>
-    <div class="navBar">
-      <button></button>
-      <div class="navLinks">
-          <button class="navBtn">Contest reminder</button>
-          <button class="navBtn">Tracksheet</button>
-          <button class="navBtn">CP roadmap</button>
-      </div>
-    </div>
-
     <div class="container">
       <h1 id="dayNo"></h1>
       <div class="task highlight">
@@ -29,17 +20,22 @@
       </div>
       <div class="task" id="task">Loading...</div>
       <div class="date" id="date"></div>
-      
-      <button id="contestNotice" class="CTA"><i class="fa-regular fa-bell"></i></button>
-      <p style="font-family: monospace">Contest reminder</p><br>
-      <hr>
-      <a
-      target="_blank"
-      href="https://docs.google.com/spreadsheets/d/1qAr8q9Rzr3rN03OIX-kI-cYREcugSxubB5HJGQniq7o/edit?gid=704941802#gid=704941802"
-      >
-      <button id="trackSheet" class="CTA"><i class="fa-solid fa-table"></i></button>
-    </a>
-    <p style="font-family: monospace">trackSheet</p>
+
+      <br>
+
+      <div class="nav">
+        <div class="">
+          <button class="btn" id="contestNotice">Contest reminder</button>
+          <a href="https://docs.google.com/spreadsheets/d/1qAr8q9Rzr3rN03OIX-kI-cYREcugSxubB5HJGQniq7o/edit?gid=704941802#gid=704941802"><button class="btn">Tracksheet</button></a>
+          <a href="CP_roadmap/cp.html"><button class="btn">CP roadmap</button></a>
+        </div>
+        <button class="CTA">
+          <i class=""></i>
+        </button>
+      </div>
+
+      <p style="font-family: monospace"></p>
+      <br />
     </div>
 
     <script type="module" src="script.js"></script>

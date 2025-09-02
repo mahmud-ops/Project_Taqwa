@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>CP Session Tracker</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    .session { margin: 10px 0; }
-    label { cursor: pointer; }
+  <head>
+    <meta charset="UTF-8" />
+    <title>CP Session Tracker</title>
+    <link rel="stylesheet" href="../dist/output.css">
+  </head>
+  <body class="bg-white text-black block">
+    <h1 class="font-extrabold">CP Session Tracker</h1>
+    <div id="sessions-container"></div>
 
-    .checked{
-        background-color: rgb(161, 240, 161);
-        padding: 1%;
-    }
-  </style>
-</head>
-<body>
-  <h1>CP Session Tracker</h1>
-  <div id="sessions-container"></div>
-
-  <script src="cp.js"></script>
-</body>
+    <script src="cp.js"></script>
+  </body>
 </html>
